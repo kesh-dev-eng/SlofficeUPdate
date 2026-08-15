@@ -63,7 +63,7 @@ const HERO_SLIDES = [
 const ABOUT_HIGHLIGHTS = [
   {
     id: 1,
-    title: "20+ Years of Industry Trust",
+    title: "10+ Years of Industry Trust",
     desc: "Empowering Sri Lankan businesses and corporate offices with certified laptops, printers, and office automation since 2004.",
     tag: "Established 2004",
     icon: Building2,
