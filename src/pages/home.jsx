@@ -64,8 +64,8 @@ const ABOUT_HIGHLIGHTS = [
   {
     id: 1,
     title: "10+ Years of Industry Trust",
-    desc: "Empowering Sri Lankan businesses and corporate offices with certified laptops, printers, and office automation since 2004.",
-    tag: "Established 2004",
+    desc: "Empowering Sri Lankan businesses and corporate offices with certified laptops, printers, and office automation since 2016.",
+    tag: "Established 2016",
     icon: Building2,
     color: "bg-blue-600",
   },
