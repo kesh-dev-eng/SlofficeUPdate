@@ -105,7 +105,6 @@ const NAV_LINKS = [
             { label: "All Services Overview", href: "/services" },
             { label: "Warranty Claim Portal", href: "/warranty-claim" },
             { label: "Hardware Repair Center", href: "/repair-center" },
-            { label: "Delivery & Returns Policy", href: "/delivery-returns" },
             { label: "Terms & Conditions", href: "/terms-conditions" },
         ],
     },
@@ -554,9 +553,6 @@ export default function Navbar({ onSelectCategory }) {
                                 </Link>
                                 <Link to="/installation-service" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-xl text-xs text-slate-600 hover:bg-slate-50 block font-medium">
                                     On-Site Installation Service
-                                </Link>
-                                <Link to="/delivery-returns" onClick={() => setMobileMenuOpen(false)} className="px-3 py-2 rounded-xl text-xs text-slate-600 hover:bg-slate-50 block font-medium">
-                                    Delivery & Returns Policy
                                 </Link>
                             </div>
                         </div>

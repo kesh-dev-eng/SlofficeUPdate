@@ -896,7 +896,6 @@ export default function Home() {
               <li><Link to="/services" className="hover:text-white transition-colors">Our Services</Link></li>
               <li><Link to="/warranty-claim" className="hover:text-white transition-colors">Warranty Claim</Link></li>
               <li><Link to="/repair-center" className="hover:text-white transition-colors">Repair Center</Link></li>
-              <li><Link to="/delivery-returns" className="hover:text-white transition-colors">Delivery & Returns Policy</Link></li>
             </ul>
           </div>
           <div>
