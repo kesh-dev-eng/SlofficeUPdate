@@ -141,8 +141,8 @@ Hello SL Office Solutions, I have placed this order on your store. Please proces
       id: `ORD-${orderIdCode}`,
       customer: shippingInfo.fullName || session?.user?.email?.split('@')[0] || "Customer",
       email: session?.user?.email || "customer@sloffice.com",
-      phone: shippingInfo.phone || "+94 77 123 4567",
-      address: shippingInfo.address || "Main Street, Colombo",
+      phone: shippingInfo.phone || "070 777 9933",
+      address: shippingInfo.address || "No: 608/11 Makola North, Makola",
       product: cart.map(i => `${i.name} (x${i.quantity})`).join(', ') || "Office Automation Tech",
       total: `LKR ${totalPrice.toFixed(2)}`,
       date: new Date().toISOString().split('T')[0],
@@ -163,7 +163,7 @@ Hello SL Office Solutions, I have placed this order on your store. Please proces
       newOrder.address,
       paymentMethodLabel
     );
-    const waUrl = `https://wa.me/94719779933?text=${encodeURIComponent(waText)}`;
+    const waUrl = `https://wa.me/94707779933?text=${encodeURIComponent(waText)}`;
     setWhatsappInvoiceUrl(waUrl);
 
     // Save to MongoDB Atlas database & local cache
@@ -297,7 +297,7 @@ Hello SL Office Solutions, I have placed this order on your store. Please proces
                   required
                   value={shippingInfo.address}
                   onChange={(e) => setShippingInfo({ ...shippingInfo, address: e.target.value })}
-                  placeholder="123 Main Street, Suite 400, Colombo"
+                  placeholder="No: 608/11 Makola North, Makola"
                   className="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:border-blue-500 outline-none transition-all"
                 />
               </div>
@@ -311,7 +311,7 @@ Hello SL Office Solutions, I have placed this order on your store. Please proces
                   required
                   value={shippingInfo.phone}
                   onChange={(e) => setShippingInfo({ ...shippingInfo, phone: e.target.value })}
-                  placeholder="071 677 8833"
+                  placeholder="070 777 9933"
                   className="w-full px-4 py-2.5 bg-slate-50 border border-slate-300 rounded-xl text-sm focus:bg-white focus:border-blue-500 outline-none transition-all"
                 />
               </div>
@@ -376,7 +376,7 @@ Hello SL Office Solutions, I have placed this order on your store. Please proces
                       Direct WhatsApp Order & Auto Invoice
                     </p>
                     <p className="text-[11px] text-emerald-700 leading-relaxed">
-                      Clicking submit will instantly compile your itemized invoice and open WhatsApp (+94 71 977 9933) to send your order for quick processing.
+                      Clicking submit will instantly compile your itemized invoice and open WhatsApp (070 777 9933) to send your order for quick processing.
                     </p>
                   </div>
                 )}

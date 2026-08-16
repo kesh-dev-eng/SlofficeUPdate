@@ -112,105 +112,76 @@ export default function InstallationServicePage() {
           })}
         </div>
 
-        {/* REQUEST INSTALLATION FORM */}
+        {/* DIRECT INSTALLATION CONTACT CARDS */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm max-w-3xl mx-auto space-y-6">
           <div>
             <h3 className="text-xl font-extrabold text-slate-900 flex items-center gap-2">
-              <Building size={22} className="text-blue-600" /> Request On-Site Installation Team Visit
+              <Building size={22} className="text-blue-600" /> Direct On-Site Installation Booking Desk
             </h3>
             <p className="text-xs text-slate-500 mt-1">
-              Schedule a technician visit to install and configure your equipment on-site.
+              Contact our certified engineering team directly to schedule a site visit or request a custom installation quotation.
             </p>
           </div>
 
-          {installSubmitted ? (
-            <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center space-y-4">
-              <CheckCircle size={40} className="text-emerald-600 mx-auto" />
-              <h4 className="text-lg font-extrabold text-emerald-900">Installation Visit Requested!</h4>
-              <p className="text-xs text-emerald-800 max-w-md mx-auto">
-                Thank you <strong>{formData.name}</strong>. Our installation team will contact you at <strong>{formData.phone}</strong> to confirm your site visit for <strong>{formData.installType}</strong>.
-              </p>
-              <button
-                onClick={() => setInstallSubmitted(false)}
-                className="bg-white border border-slate-300 text-slate-700 text-xs font-extrabold px-4 py-2.5 rounded-xl hover:bg-slate-50"
-              >
-                Submit Another Request
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleInstallSubmit} className="space-y-4 text-xs">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="font-bold text-slate-700 block mb-1">Your Name / Organization *</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. Sahan De Silva / ABC Firm"
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                  />
-                </div>
-
-                <div>
-                  <label className="font-bold text-slate-700 block mb-1">Phone Number *</label>
-                  <input
-                    type="tel"
-                    required
-                    placeholder="e.g. +94 71 677 8833"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                  />
-                </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold">
+            {/* Hotline 1 */}
+            <a
+              href="tel:0707779933"
+              className="flex items-center gap-3 p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group"
+            >
+              <div className="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center shrink-0">
+                <Building size={18} />
               </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="font-bold text-slate-700 block mb-1">Installation Service *</label>
-                  <select
-                    value={formData.installType}
-                    onChange={(e) => setFormData({ ...formData, installType: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium bg-white"
-                  >
-                    {INSTALLATION_OPTIONS.map((opt, i) => (
-                      <option key={i} value={opt.title}>{opt.title}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="font-bold text-slate-700 block mb-1">City / Installation Location *</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. Colombo 03, Kandy, Galle..."
-                    value={formData.location}
-                    onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                  />
-                </div>
-              </div>
-
               <div>
-                <label className="font-bold text-slate-700 block mb-1">Specific Requirements / Notes</label>
-                <textarea
-                  rows={4}
-                  placeholder="Number of cameras, building floors, cabling requirements, or preferred date..."
-                  value={formData.notes}
-                  onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                ></textarea>
+                <span className="text-[10px] text-slate-400 block uppercase">Installation Desk Hotline</span>
+                <span className="text-sm font-black text-slate-900 group-hover:text-blue-600">070 777 99 33</span>
               </div>
+            </a>
 
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold py-3.5 rounded-xl transition-all cursor-pointer shadow-md flex items-center justify-center gap-2 text-sm"
-              >
-                <Send size={18} /> Schedule Installation Visit
-              </button>
-            </form>
-          )}
+            {/* Hotline 2 */}
+            <a
+              href="tel:0716778833"
+              className="flex items-center gap-3 p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group"
+            >
+              <div className="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center shrink-0">
+                <Building size={18} />
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-400 block uppercase">Retail Operations</span>
+                <span className="text-sm font-black text-slate-900 group-hover:text-emerald-600">071 677 88 33</span>
+              </div>
+            </a>
+
+            {/* Sajith Jayawardena Direct */}
+            <a
+              href="tel:0784177404"
+              className="flex items-center gap-3 p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group"
+            >
+              <div className="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center shrink-0">
+                <Building size={18} />
+              </div>
+              <div>
+                <span className="text-[10px] text-slate-400 block uppercase">Sajith Jayawardena (Direct Mobile)</span>
+                <span className="text-sm font-black text-slate-900 group-hover:text-purple-600">078 417 7404</span>
+              </div>
+            </a>
+
+            {/* WhatsApp Direct */}
+            <a
+              href="https://wa.me/94707779933?text=Hello%20SL%20Office%20Solutions,%20I%20would%20like%20to%20book%20an%20on-site%20installation."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-4 bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/30 rounded-2xl transition-all group"
+            >
+              <div className="w-10 h-10 bg-[#25D366] text-white rounded-xl flex items-center justify-center shrink-0">
+                <Building size={18} />
+              </div>
+              <div>
+                <span className="text-[10px] text-emerald-700 block uppercase font-extrabold">Instant WhatsApp Installation Booking</span>
+                <span className="text-sm font-black text-emerald-900">070 777 99 33</span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
 

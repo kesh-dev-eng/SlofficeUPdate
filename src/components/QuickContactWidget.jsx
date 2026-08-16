@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { Phone, X, Headphones } from 'lucide-react';
 
 export default function QuickContactWidget({
-  phone = "+94 71 677 8833",
-  whatsappNumber = "94719779933",
+  phone = "070 777 9933",
+  whatsappNumber = "94707779933",
   whatsappMessage = "Hello SL Office Solutions, I would like to inquire about your products and services."
 }) {
   const [isOpen, setIsOpen] = useState(true);

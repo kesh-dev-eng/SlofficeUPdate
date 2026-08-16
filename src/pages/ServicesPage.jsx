@@ -16,122 +16,106 @@ import {
   Headphones,
   Sparkles,
   CheckCircle,
-  FileText
+  FileText,
+  Wrench,
+  MapPin,
+  Mail
 } from 'lucide-react';
 
 const SERVICES = [
   {
-    id: 'cctv-security',
-    title: 'CCTV & Security Solutions Installation',
-    category: 'Security Systems',
-    icon: Camera,
-    color: 'from-amber-500 to-red-600',
-    lightBg: 'bg-amber-50',
-    borderColor: 'border-amber-200',
-    tagColor: 'bg-amber-100 text-amber-800',
-    badge: 'Popular',
-    desc: 'Complete turn-key security installations including 4K IP cameras, XVR/DVR setup, motion sensors, access control, and mobile remote monitoring.',
-    features: [
-      '4K UHD IP & HDCVI Cameras Installation',
-      'Remote Mobile & Desktop Live Stream Setup',
-      'Surveillance Hard Disk & Cloud Backup',
-      'Perimeter Alarm & Motion Detectors',
-      'Access Control & Biometric Time Attendance'
-    ]
-  },
-  {
-    id: 'laptop-pc-repair',
-    title: 'Laptop & Desktop Hardware Repairs',
-    category: 'Computer Repairs',
-    icon: Laptop,
-    color: 'from-blue-600 to-cyan-500',
-    lightBg: 'bg-blue-50',
-    borderColor: 'border-blue-200',
-    tagColor: 'bg-blue-100 text-blue-800',
-    badge: 'Express Service',
-    desc: 'Expert chip-level hardware repairs, screen replacements, SSD/RAM speed upgrades, logic board diagnostics, and liquid damage recovery.',
-    features: [
-      'High-Speed NVMe SSD & RAM Performance Upgrades',
-      'Screen, Keyboard & Battery Replacement',
-      'Motherboard & Power IC Chip Repair',
-      'Thermal Paste Cleaning & Fan Servicing',
-      'OS Installation, Virus & Malware Removal'
-    ]
-  },
-  {
-    id: 'printer-automation',
-    title: 'Office Printer & Automation Maintenance',
-    category: 'Office Tech',
+    id: 'office-automation',
+    title: 'Office Automation Solutions',
+    category: 'Printing & Document Systems',
     icon: Printer,
     color: 'from-emerald-500 to-teal-600',
     lightBg: 'bg-emerald-50',
     borderColor: 'border-emerald-200',
     tagColor: 'bg-emerald-100 text-emerald-800',
-    badge: 'Certified Support',
-    desc: 'On-site maintenance and repairs for multi-function laser printers, heavy-duty network copiers, toner refills, and drum replacements.',
+    badge: 'Core Service',
+    desc: 'End-to-end office automation covering high-performance multifunction printers, photocopiers, scanners, and digital document workflows.',
     features: [
-      'Multi-Function Network Printer Configuration',
-      'LaserJet & InkJet Hardware Servicing',
-      'High-Yield Genuine Toner Cartridge Refills',
-      'Fuser Unit, Roller & Paper Jam Repairs',
-      'Scheduled Preventive Cleaning Contracts'
+      'Multifunction Printers (MFPs) & Laser Printers',
+      'High-Speed Inkjet Printers & Photocopiers',
+      'High-Volume Document Scanners',
+      'Document Management & Workflow Solutions',
+      'Genuine Spare Parts & Cartridge Supply'
     ]
   },
   {
-    id: 'networking-wifi',
-    title: 'Enterprise Wi-Fi & Structured Cabling',
-    category: 'Networking',
+    id: 'cctv-security',
+    title: 'CCTV & Security Solutions',
+    category: 'Smart Security & Surveillance',
+    icon: Camera,
+    color: 'from-amber-500 to-red-600',
+    lightBg: 'bg-amber-50',
+    borderColor: 'border-amber-200',
+    tagColor: 'bg-amber-100 text-amber-800',
+    badge: 'High Security',
+    desc: 'State-of-the-art surveillance and biometric access systems designed for corporate offices, financial institutions, and retail facilities.',
+    features: [
+      'IP Surveillance Systems & AI-Based CCTV',
+      'Network Video Recorders (NVR) & DVR Setup',
+      'Biometric Access Control Systems',
+      'Time Attendance Systems Integration',
+      '24/7 Remote Mobile & Desktop Live Monitoring'
+    ]
+  },
+  {
+    id: 'it-infrastructure',
+    title: 'IT Infrastructure Solutions',
+    category: 'Enterprise Networking',
     icon: Wifi,
     color: 'from-indigo-600 to-purple-600',
     lightBg: 'bg-indigo-50',
     borderColor: 'border-indigo-200',
     tagColor: 'bg-indigo-100 text-indigo-800',
-    badge: 'High Performance',
-    desc: 'Seamless dual-band Wi-Fi 6 mesh setup, structured Cat6 Ethernet cabling, server rack organization, and secure firewall configuration.',
+    badge: 'Enterprise Grade',
+    desc: 'Complete network architecture design, Cat6 structured cabling, router & switch setup, and ongoing IT support.',
     features: [
-      'High-Speed Wi-Fi 6 Access Points Installation',
-      'Structured Cat6 Ethernet Network Cabling',
-      'Managed Switch & Gigabit Router Setup',
-      'Server Rack Cabinet Clean-Up & Patching',
-      'Hardware Firewall & Secure Guest Wi-Fi'
+      'Structured Network Cabling (Cat6 / Fiber)',
+      'LAN & WAN System Architecture & Deployment',
+      'Network Installation & Switch Configuration',
+      'Server Rack Cabinets & Firewall Setup',
+      'Ongoing Technical IT Infrastructure Support'
     ]
   },
   {
-    id: 'audio-visual',
-    title: 'Conference Room Audio & Visual Systems',
-    category: 'AV Solutions',
-    icon: Headphones,
-    color: 'from-purple-600 to-pink-600',
-    lightBg: 'bg-purple-50',
-    borderColor: 'border-purple-200',
-    tagColor: 'bg-purple-100 text-purple-800',
-    badge: 'Smart Office',
-    desc: 'Transform boardrooms with 4K interactive touch displays, wireless screen sharing, Bluetooth conference speakerphones, and projectors.',
+    id: 'computer-equipment',
+    title: 'Computer & Office Equipment',
+    category: 'Hardware & Accessories',
+    icon: Laptop,
+    color: 'from-blue-600 to-cyan-500',
+    lightBg: 'bg-blue-50',
+    borderColor: 'border-blue-200',
+    tagColor: 'bg-blue-100 text-blue-800',
+    badge: 'Official Warranty',
+    desc: 'Supply and installation of corporate desktop PCs, ultrabook laptops, high-resolution monitors, UPS backup systems, and projectors.',
     features: [
-      'Smart Interactive Touch Panel Installation',
-      'Bluetooth & USB Conference Speakerphones',
-      'Ultra Short-Throw Office Projectors & Screens',
-      'Wireless Presentation & Screen Mirroring',
-      'Acoustic Mic & Sound System Tuning'
+      'Corporate Desktop Computers & Workstations',
+      'Business Laptops & Ultrabooks',
+      'Full HD & 4K Professional Monitors',
+      'Uninterruptible Power Supply (UPS) Systems',
+      'HD Office Projectors & Accessories'
     ]
   },
   {
-    id: 'corporate-amc',
-    title: 'Annual Maintenance Contracts (AMC)',
-    category: 'Enterprise SLA',
-    icon: ShieldCheck,
+    id: 'technical-support',
+    title: 'Technical Support & Maintenance Services',
+    category: 'AMC & Servicing',
+    icon: Wrench,
     color: 'from-slate-800 to-slate-900',
     lightBg: 'bg-slate-50',
     borderColor: 'border-slate-200',
     tagColor: 'bg-slate-200 text-slate-800',
-    badge: 'Corporate',
-    desc: 'Comprehensive annual IT maintenance for corporate offices with guaranteed emergency response times, regular visits, and standby equipment.',
+    badge: '24/7 SLA',
+    desc: 'Preventive maintenance, rapid breakdown repairs, warranty support, and dedicated Annual Maintenance Contracts (AMC).',
     features: [
-      'Guaranteed 2-Hour Emergency On-Site Response',
-      'Monthly Scheduled Preventive Maintenance Visits',
-      'Standby Hardware & Replacement Units',
-      'Dedicated IT Asset Management & Tracking',
-      'Priority Phone & Remote Support Helpline'
+      'Scheduled Preventive Maintenance Services',
+      'Emergency Breakdown Repair Services',
+      'Genuine Spare Parts & Component Supply',
+      'Official Manufacturer Warranty Support',
+      'On-Site & Remote Technical Assistance'
     ]
   }
 ];
@@ -139,23 +123,23 @@ const SERVICES = [
 const PROCESS_STEPS = [
   {
     step: '01',
-    title: 'Free Site Assessment',
-    desc: 'Our certified technicians visit your premises to evaluate layout, electrical wiring, and system requirements.'
+    title: 'Requirement Consultation',
+    desc: 'We analyze your business layout, workflow requirements, and technology needs.'
   },
   {
     step: '02',
-    title: 'Custom Proposal',
-    desc: 'Receive an itemized technical proposal and transparent quotation tailored to your exact budget.'
+    title: 'System Design & Quote',
+    desc: 'Receive an itemized technical proposal and transparent quotation tailored to your budget.'
   },
   {
     step: '03',
-    title: 'Expert Installation',
-    desc: 'Our engineers carry out clean, professional installation with minimal disruption to your daily operations.'
+    title: 'Supply & Installation',
+    desc: 'Our experienced professionals deliver and install genuine equipment on-site.'
   },
   {
     step: '04',
-    title: 'Testing & Warranty',
-    desc: 'Comprehensive system testing, end-user operational training, and full warranty coverage.'
+    title: 'After-Sales & Maintenance',
+    desc: 'Continuous support, warranty coverage, preventive maintenance, and remote assistance.'
   }
 ];
 
@@ -201,13 +185,13 @@ export default function ServicesPage() {
   };
 
   const whatsappMessage = `Hello SL Office Solutions, I would like to request a quotation for: ${formData.service || selectedService}. My name is ${formData.name || 'Customer'}.`;
-  const whatsappUrl = `https://wa.me/94719779933?text=${encodeURIComponent(whatsappMessage)}`;
+  const whatsappUrl = `https://wa.me/94707779933?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
       <SEOHead
-        title="Our Services - SL Office Solutions"
-        description="Professional CCTV installation, laptop repairs, printer servicing, enterprise networking, and IT annual maintenance contracts in Sri Lanka."
+        title="Our Services | SL Office Solutions Sri Lanka"
+        description="Office Automation, CCTV Security, IT Infrastructure, Computer & Office Equipment supply, and Technical Support & Maintenance Services in Sri Lanka."
       />
 
       <Navbar />
@@ -220,15 +204,15 @@ export default function ServicesPage() {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-extrabold uppercase px-3.5 py-1.5 rounded-full">
-              <Sparkles size={14} /> Certified Technical Engineering Services
+              <Sparkles size={14} /> SL Office Solutions Services
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
-              Enterprise IT & Office Automation Services
+              Technology & Business Support Services
             </h1>
 
             <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl font-normal">
-              Empowering corporate offices, retail stores, and commercial spaces across Sri Lanka with certified CCTV security, hardware repairs, Wi-Fi networking, and Annual Maintenance Contracts.
+              Providing office automation, IT infrastructure, CCTV security solutions, computers, and end-to-end technical support services across Sri Lanka.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-2">
@@ -239,7 +223,7 @@ export default function ServicesPage() {
                 <FileText size={18} /> Request Free Quotation
               </a>
               <a
-                href="https://wa.me/94719779933?text=Hello%20SL%20Office%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                href="https://wa.me/94707779933?text=Hello%20SL%20Office%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-2xl shadow-xl shadow-emerald-600/20 hover:scale-105 transition-all flex items-center gap-2 border border-emerald-400/30"
@@ -251,16 +235,16 @@ export default function ServicesPage() {
             {/* Feature highlights bar */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-slate-800/80 text-slate-300 text-xs">
               <div className="flex items-center gap-2 font-bold">
-                <CheckCircle2 size={16} className="text-emerald-400 shrink-0" /> 20+ Years Experience
+                <CheckCircle2 size={16} className="text-emerald-400 shrink-0" /> End-to-End Solutions
               </div>
               <div className="flex items-center gap-2 font-bold">
                 <CheckCircle2 size={16} className="text-blue-400 shrink-0" /> On-Site Installation
               </div>
               <div className="flex items-center gap-2 font-bold">
-                <CheckCircle2 size={16} className="text-purple-400 shrink-0" /> Certified Engineers
+                <CheckCircle2 size={16} className="text-purple-400 shrink-0" /> Experienced Team
               </div>
               <div className="flex items-center gap-2 font-bold">
-                <CheckCircle2 size={16} className="text-amber-400 shrink-0" /> Official Warranty
+                <CheckCircle2 size={16} className="text-amber-400 shrink-0" /> 1-Year Warranty
               </div>
             </div>
           </div>
@@ -271,13 +255,13 @@ export default function ServicesPage() {
       <section className="py-16 sm:py-24 max-w-[1400px] mx-auto px-4 sm:px-6 w-full space-y-12">
         <div className="text-center max-w-2xl mx-auto space-y-3">
           <span className="text-xs font-black uppercase tracking-wider text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100">
-            What We Do
+            Our Services
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Comprehensive Solutions for Modern Offices
+            Core Technology Solutions
           </h2>
           <p className="text-xs sm:text-sm text-slate-500">
-            Select a service below to learn more or request on-site installation and support.
+            Empowering government institutions, banks, corporate enterprises, and SMEs across Sri Lanka.
           </p>
         </div>
 
@@ -335,7 +319,7 @@ export default function ServicesPage() {
                   </a>
 
                   <a
-                    href={`tel:+94716778833`}
+                    href="tel:0707779933"
                     className="p-2.5 bg-slate-100 hover:bg-blue-50 text-slate-600 hover:text-blue-600 rounded-xl transition-colors"
                     title="Call Support"
                   >
@@ -356,10 +340,10 @@ export default function ServicesPage() {
               Our Process
             </span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Simple 4-Step Technical Workflow
+              4-Step Service Implementation
             </h2>
             <p className="text-xs sm:text-sm text-slate-400">
-              How we deliver reliable, high-performance office tech services with maximum transparency.
+              How we deliver end-to-end technology solutions covering consultation, supply, and support.
             </p>
           </div>
 
@@ -383,183 +367,104 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* REQUEST QUOTE & INQUIRY FORM SECTION */}
+      {/* DIRECT CONTACT NUMBERS & CONSULTATION SECTION */}
       <section id="request-quote" className="py-16 sm:py-24 max-w-[1400px] mx-auto px-4 sm:px-6 w-full">
-        <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12">
-          {/* Left info column (5/12) */}
-          <div className="lg:col-span-5 bg-gradient-to-br from-slate-900 via-indigo-950 to-blue-950 text-white p-8 sm:p-12 space-y-8 flex flex-col justify-between relative overflow-hidden">
-            <div className="space-y-6 relative z-10">
+        <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden">
+          <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-950 text-white p-8 sm:p-12 space-y-8">
+            <div className="max-w-3xl space-y-4">
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-blue-400 bg-blue-500/20 px-3 py-1 rounded-full border border-blue-400/20">
-                Direct Contact
+                Direct Contact & Consultation
               </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-                Request Service or On-Site Visit
+              <h3 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
+                Contact SL Office Solutions Directly
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                Fill out the form with your details or call our technical helpline directly. We provide rapid responses across Sri Lanka.
+                Call our hotlines or message us directly on WhatsApp for immediate technical support, on-site service booking, or itemized quotation requests.
               </p>
+            </div>
 
-              <div className="space-y-4 pt-4 text-xs font-semibold">
-                <a
-                  href="tel:+94716778833"
-                  className="flex items-center gap-3 bg-white/10 hover:bg-white/20 p-4 rounded-2xl border border-white/10 transition-colors"
-                >
-                  <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shrink-0">
-                    <Phone size={18} />
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-slate-400 block uppercase">Phone Hotline</span>
-                    <span className="text-sm font-black text-white">+94 71 677 8833</span>
-                  </div>
-                </a>
+            {/* Grid of Direct Contact Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+              
+              {/* Hotline 1 */}
+              <a
+                href="tel:0707779933"
+                className="bg-white/10 hover:bg-white/20 p-5 rounded-2xl border border-white/10 transition-all flex flex-col justify-between space-y-3 group"
+              >
+                <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] text-blue-300 block uppercase font-bold">General Hotline</span>
+                  <span className="text-base font-black text-white">070 777 99 33</span>
+                </div>
+                <span className="text-[11px] text-slate-400 font-semibold group-hover:text-white transition-colors">Tap to call hotline →</span>
+              </a>
 
-                <a
-                  href="https://wa.me/94719779933"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 bg-[#25D366]/20 hover:bg-[#25D366]/30 p-4 rounded-2xl border border-[#25D366]/30 transition-colors"
-                >
-                  <div className="w-10 h-10 bg-[#25D366] rounded-xl flex items-center justify-center text-white shrink-0">
-                    <MessageCircle size={18} />
-                  </div>
-                  <div>
-                    <span className="text-[10px] text-emerald-300 block uppercase">WhatsApp Direct</span>
-                    <span className="text-sm font-black text-white">+94 71 977 9933</span>
-                  </div>
-                </a>
+              {/* Hotline 2 */}
+              <a
+                href="tel:0716778833"
+                className="bg-white/10 hover:bg-white/20 p-5 rounded-2xl border border-white/10 transition-all flex flex-col justify-between space-y-3 group"
+              >
+                <div className="w-10 h-10 bg-emerald-600 rounded-xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] text-emerald-300 block uppercase font-bold">Retail Operation</span>
+                  <span className="text-base font-black text-white">071 677 88 33</span>
+                </div>
+                <span className="text-[11px] text-slate-400 font-semibold group-hover:text-white transition-colors">Tap to call retail desk →</span>
+              </a>
+
+              {/* Sajith Jayawardena Direct */}
+              <a
+                href="tel:0784177404"
+                className="bg-white/10 hover:bg-white/20 p-5 rounded-2xl border border-white/10 transition-all flex flex-col justify-between space-y-3 group"
+              >
+                <div className="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] text-purple-300 block uppercase font-bold">Sajith Jayawardena</span>
+                  <span className="text-base font-black text-white">078 417 7404</span>
+                </div>
+                <span className="text-[11px] text-slate-400 font-semibold group-hover:text-white transition-colors">Tap for direct mobile →</span>
+              </a>
+
+              {/* WhatsApp Direct */}
+              <a
+                href="https://wa.me/94707779933?text=Hello%20SL%20Office%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#25D366]/20 hover:bg-[#25D366]/30 p-5 rounded-2xl border border-[#25D366]/30 transition-all flex flex-col justify-between space-y-3 group"
+              >
+                <div className="w-10 h-10 bg-[#25D366] rounded-xl flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
+                  <MessageCircle size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] text-emerald-300 block uppercase font-bold">WhatsApp Instant</span>
+                  <span className="text-base font-black text-white">070 777 99 33</span>
+                </div>
+                <span className="text-[11px] text-emerald-300 font-semibold group-hover:text-white transition-colors">Open WhatsApp chat →</span>
+              </a>
+
+            </div>
+
+            {/* Address & Email Bar */}
+            <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-start sm:items-center text-xs text-slate-300 gap-4">
+              <div className="flex items-center gap-2">
+                <MapPin size={16} className="text-blue-400 shrink-0" />
+                <span><strong className="text-white">Head Office:</strong> No: 608/11 Makola North, Makola.</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail size={16} className="text-amber-400 shrink-0" />
+                <span><strong className="text-white">Email:</strong> <a href="mailto:slofficesolutions@gmail.com" className="text-blue-300 hover:underline">slofficesolutions@gmail.com</a></span>
               </div>
             </div>
-
-            <div className="pt-6 border-t border-slate-800 text-[11px] text-slate-400 space-y-1 relative z-10">
-              <p className="font-bold text-white">SL Office Solutions Support Center</p>
-              <p>Colombo & Islandwide On-Site Service Available</p>
-            </div>
-          </div>
-
-          {/* Right Form Column (7/12) */}
-          <div className="lg:col-span-7 p-8 sm:p-12 space-y-6">
-            <div>
-              <h3 className="text-2xl font-extrabold text-slate-900">Service Request Form</h3>
-              <p className="text-xs text-slate-500 mt-1">Get an exact quotation or schedule a technician visit</p>
-            </div>
-
-            {formSubmitted ? (
-              <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center space-y-4 animate-in fade-in duration-300">
-                <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-                  <CheckCircle size={32} />
-                </div>
-                <h4 className="text-lg font-extrabold text-emerald-900">Inquiry Received Successfully!</h4>
-                <p className="text-xs text-emerald-800 max-w-md mx-auto">
-                  Thank you, <strong>{formData.name}</strong>. Our engineering team has received your request for <strong>{formData.service}</strong> and will contact you shortly.
-                </p>
-                <div className="pt-2 flex flex-wrap justify-center gap-3">
-                  <button
-                    onClick={() => setFormSubmitted(false)}
-                    className="bg-white border border-slate-300 text-slate-700 text-xs font-bold px-4 py-2.5 rounded-xl hover:bg-slate-50 transition-colors"
-                  >
-                    Submit Another Request
-                  </button>
-                  <a
-                    href={whatsappUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-[#25D366] text-white text-xs font-extrabold px-4 py-2.5 rounded-xl hover:bg-[#20ba5a] transition-colors flex items-center gap-2"
-                  >
-                    <MessageCircle size={16} /> Instant WhatsApp Follow-up
-                  </a>
-                </div>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmitInquiry} className="space-y-4 text-xs">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Your Full Name *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Ruwan Perera"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Phone Number *</label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="e.g. +94 77 123 4567"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Email Address</label>
-                    <input
-                      type="email"
-                      placeholder="e.g. info@company.com"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Company / Organization</label>
-                    <input
-                      type="text"
-                      placeholder="e.g. ABC Holdings (Optional)"
-                      value={formData.company}
-                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="font-bold text-slate-700 block mb-1">Select Required Service *</label>
-                  <select
-                    value={formData.service}
-                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium bg-white"
-                  >
-                    {SERVICES.map((s) => (
-                      <option key={s.id} value={s.title}>
-                        {s.title}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label className="font-bold text-slate-700 block mb-1">Message / Requirements</label>
-                  <textarea
-                    rows={4}
-                    placeholder="Describe your location, number of cameras, printer model, or specific technical requirements..."
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold py-3.5 rounded-xl transition-all cursor-pointer shadow-lg shadow-blue-600/20 flex items-center justify-center gap-2 text-sm"
-                >
-                  <Send size={18} /> Submit Quotation Request
-                </button>
-              </form>
-            )}
           </div>
         </div>
       </section>
 
-      {/* FOOTER & QUICK CONTACT */}
       <QuickContactWidget />
     </div>
   );

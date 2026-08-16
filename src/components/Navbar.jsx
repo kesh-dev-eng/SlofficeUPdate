@@ -105,10 +105,8 @@ const NAV_LINKS = [
             { label: "All Services Overview", href: "/services" },
             { label: "Warranty Claim Portal", href: "/warranty-claim" },
             { label: "Hardware Repair Center", href: "/repair-center" },
-            { label: "On-Site Installation Service", href: "/installation-service" },
             { label: "Delivery & Returns Policy", href: "/delivery-returns" },
-            { label: "CCTV Security Installation", href: "/services#cctv-security" },
-            { label: "Annual Maintenance Contracts", href: "/services#corporate-amc" },
+            { label: "Terms & Conditions", href: "/terms-conditions" },
         ],
     },
     {
@@ -117,8 +115,10 @@ const NAV_LINKS = [
         href: "/services#request-quote",
         items: [
             { label: " Service Request & Inquiry Form", href: "/services#request-quote" },
-            { label: " Call Hotline", href: "tel:+94716778833" },
-            { label: " WhatsApp Chat", href: "https://wa.me/94719779933?text=Hello%20SL%20Office%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services." },
+            { label: " Call Hotline (070 777 9933)", href: "tel:0707779933" },
+            { label: " Retail Operation (071 677 8833)", href: "tel:0716778833" },
+            { label: " Direct Mobile (078 417 7404)", href: "tel:0784177404" },
+            { label: " WhatsApp Chat", href: "https://wa.me/94707779933?text=Hello%20SL%20Office%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services." },
         ],
     },
 ];

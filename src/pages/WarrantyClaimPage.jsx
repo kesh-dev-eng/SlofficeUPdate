@@ -11,7 +11,9 @@ import {
   Send,
   Phone,
   MessageCircle,
-  FileText
+  FileText,
+  AlertTriangle,
+  Wrench
 } from 'lucide-react';
 
 export default function WarrantyClaimPage() {
@@ -34,19 +36,18 @@ export default function WarrantyClaimPage() {
     e.preventDefault();
     if (!serialQuery.trim()) return;
 
-    // Simulated warranty database check
     if (serialQuery.length >= 4) {
       setSerialResult({
         valid: true,
         serial: serialQuery.toUpperCase(),
-        product: "UltraBook Pro 15 - Intel i7 16GB",
-        purchaseDate: "2025-06-15",
-        warrantyExpires: "2028-06-15",
-        status: "Active (Covered under 3-Year Official Warranty)"
+        product: "Multifunction Laser Printer / Workstation",
+        purchaseDate: "2025-09-10",
+        warrantyExpires: "2026-09-10",
+        status: "Active (Covered under 1-Year Manufacturer Warranty)"
       });
       setSerialError('');
     } else {
-      setSerialError('Serial number not found. Please check your invoice or contact support.');
+      setSerialError('Serial number not found. Please check your invoice or contact SL Office Solutions support.');
       setSerialResult(null);
     }
   };
@@ -79,8 +80,8 @@ export default function WarrantyClaimPage() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
       <SEOHead
-        title="Warranty Claim & Status Portal | SL Office Solutions"
-        description="Register a hardware warranty claim or check official warranty validity for laptops, printers, CCTV, and office automation in Sri Lanka."
+        title="Warranty Terms & Claim Portal | SL Office Solutions"
+        description="Official Warranty Terms & Conditions, 1-Year Manufacturer Warranty registration, and serial verification for SL Office Solutions."
       />
 
       <Navbar />
@@ -93,15 +94,16 @@ export default function WarrantyClaimPage() {
             <ShieldCheck size={14} /> Official SL Office Guarantee
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
-            Warranty Claim & Verification Portal
+            Warranty Claim & Verification
           </h1>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-            Submit a hardware warranty claim online, track warranty status by serial number, or connect with our authorized service center technicians.
+            Submit a hardware warranty claim online or check official warranty validity by serial number.
           </p>
         </div>
       </section>
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-12 space-y-12 w-full flex-1">
+        
         {/* CHECK WARRANTY STATUS CARD */}
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
           <div className="max-w-xl">
@@ -150,158 +152,135 @@ export default function WarrantyClaimPage() {
           )}
         </div>
 
-        {/* WARRANTY CLAIM FORM & POLICY GRID */}
+        {/* WARRANTY CLAIM FORM & DETAILED POLICY */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Left Form (7/12) */}
+          
+          {/* Direct Warranty Support Contact (7/12) */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
             <div>
               <h3 className="text-xl font-extrabold text-slate-900 flex items-center gap-2">
-                <FileText size={20} className="text-blue-600" /> Submit Warranty Claim Request
+                <FileText size={20} className="text-blue-600" /> Direct Warranty Service Desk
               </h3>
               <p className="text-xs text-slate-500 mt-1">
-                Fill out the claim form below. Our support team will issue a Service Ticket within 24 hours.
+                Reach out directly to our warranty support officers for fast warranty claim processing, hardware inspection, or replacement requests.
               </p>
             </div>
 
-            {claimSubmitted ? (
-              <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center space-y-4">
-                <CheckCircle size={40} className="text-emerald-600 mx-auto" />
-                <h4 className="text-lg font-extrabold text-emerald-900">Warranty Claim Registered!</h4>
-                <p className="text-xs text-emerald-800 max-w-md mx-auto">
-                  Thank you <strong>{formData.name}</strong>. Your claim for <strong>{formData.productName}</strong> has been submitted. Our technical officer will call you at <strong>{formData.phone}</strong> to arrange service pickup or on-site repair.
-                </p>
-                <button
-                  onClick={() => setClaimSubmitted(false)}
-                  className="bg-white border border-slate-300 text-slate-700 text-xs font-extrabold px-4 py-2.5 rounded-xl hover:bg-slate-50"
-                >
-                  Submit Another Claim
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleClaimSubmit} className="space-y-4 text-xs">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Your Full Name *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Kasun Perera"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Phone Number *</label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="e.g. +94 71 677 8833"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                    />
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold">
+              {/* Hotline 1 */}
+              <a
+                href="tel:0707779933"
+                className="flex items-center gap-3 p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group"
+              >
+                <div className="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center shrink-0">
+                  <Phone size={18} />
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Invoice / Receipt Number</label>
-                    <input
-                      type="text"
-                      placeholder="e.g. INV-2026-892"
-                      value={formData.invoiceNo}
-                      onChange={(e) => setFormData({ ...formData, invoiceNo: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Serial Number (S/N)</label>
-                    <input
-                      type="text"
-                      placeholder="Found on item label or box"
-                      value={formData.serialNo}
-                      onChange={(e) => setFormData({ ...formData, serialNo: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                    />
-                  </div>
-                </div>
-
                 <div>
-                  <label className="font-bold text-slate-700 block mb-1">Product Name / Model *</label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="e.g. Smart Security CCTV Camera 4K / UltraBook Pro"
-                    value={formData.productName}
-                    onChange={(e) => setFormData({ ...formData, productName: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                  />
+                  <span className="text-[10px] text-slate-400 block uppercase">Warranty Support Hotline</span>
+                  <span className="text-sm font-black text-slate-900 group-hover:text-blue-600">070 777 99 33</span>
                 </div>
+              </a>
 
+              {/* Hotline 2 */}
+              <a
+                href="tel:0716778833"
+                className="flex items-center gap-3 p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group"
+              >
+                <div className="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center shrink-0">
+                  <Phone size={18} />
+                </div>
                 <div>
-                  <label className="font-bold text-slate-700 block mb-1">Describe Fault or Issue *</label>
-                  <textarea
-                    rows={4}
-                    required
-                    placeholder="Describe what is not working (e.g. device won't power on, display lines, printer paper jam)..."
-                    value={formData.issueDesc}
-                    onChange={(e) => setFormData({ ...formData, issueDesc: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                  ></textarea>
+                  <span className="text-[10px] text-slate-400 block uppercase">Retail Operation Hotline</span>
+                  <span className="text-sm font-black text-slate-900 group-hover:text-emerald-600">071 677 88 33</span>
                 </div>
+              </a>
 
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold py-3.5 rounded-xl transition-all cursor-pointer shadow-md flex items-center justify-center gap-2 text-sm"
-                >
-                  <Send size={18} /> Register Warranty Claim
-                </button>
-              </form>
-            )}
+              {/* Sajith Jayawardena Direct */}
+              <a
+                href="tel:0784177404"
+                className="flex items-center gap-3 p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group"
+              >
+                <div className="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center shrink-0">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-400 block uppercase">Sajith Jayawardena (Direct Mobile)</span>
+                  <span className="text-sm font-black text-slate-900 group-hover:text-purple-600">078 417 7404</span>
+                </div>
+              </a>
+
+              {/* WhatsApp Direct */}
+              <a
+                href="https://wa.me/94707779933?text=Hello%20SL%20Office%20Solutions,%20I%20would%20like%20to%20claim%20warranty%20for%20my%20product."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/30 rounded-2xl transition-all group"
+              >
+                <div className="w-10 h-10 bg-[#25D366] text-white rounded-xl flex items-center justify-center shrink-0">
+                  <MessageCircle size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] text-emerald-700 block uppercase font-extrabold">Instant WhatsApp Warranty Support</span>
+                  <span className="text-sm font-black text-emerald-900">070 777 99 33</span>
+                </div>
+              </a>
+            </div>
+
+            <div className="p-4 bg-blue-50/70 border border-blue-200/80 rounded-2xl text-xs space-y-1.5 text-blue-900">
+              <strong className="font-extrabold text-blue-950 flex items-center gap-1.5">
+                <ShieldCheck size={16} className="text-blue-600" /> Instructions for Warranty Processing:
+              </strong>
+              <p className="text-slate-700 leading-relaxed">
+                When calling or messaging, please provide your <strong>Invoice / Receipt Number</strong> and the <strong>Serial Number (S/N)</strong> found on the item label. Our technical team will immediately verify warranty coverage and arrange pickup or drop-off service.
+              </p>
+            </div>
           </div>
 
-          {/* Right Warranty Policy Info (5/12) */}
+          {/* Right Policy Info (5/12) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-slate-900 text-white rounded-3xl p-6 sm:p-8 space-y-5 border border-slate-800 shadow-md">
               <h3 className="text-lg font-extrabold flex items-center gap-2">
-                <ShieldCheck size={20} className="text-blue-400" /> Warranty Policy Terms
+                <ShieldCheck size={20} className="text-blue-400" /> Warranty Terms & Exclusions
               </h3>
-              <ul className="space-y-3 text-xs text-slate-300 leading-relaxed font-normal">
-                <li className="flex items-start gap-2">
-                  <CheckCircle size={14} className="text-emerald-400 shrink-0 mt-0.5" />
-                  <span><strong>100% Genuine Tech:</strong> All products sold carry official local manufacturer/distributor warranties.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle size={14} className="text-emerald-400 shrink-0 mt-0.5" />
-                  <span><strong>Fast Turnaround:</strong> Standard hardware warranty repairs completed within 3 to 7 business days.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle size={14} className="text-emerald-400 shrink-0 mt-0.5" />
-                  <span><strong>Free Replacement Unit:</strong> Available for corporate AMC accounts during extended repairs.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle size={14} className="text-emerald-400 shrink-0 mt-0.5" />
-                  <span><strong>Exclusions:</strong> Physical damage, liquid spills, power surge/lightning, and unauthorized opening void warranty.</span>
-                </li>
-              </ul>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Products supplied are covered by a <strong>One (01) Year Manufacturer's Warranty</strong> for manufacturing defects under normal use.
+              </p>
+              
+              <div className="space-y-2 text-xs text-slate-300">
+                <p className="font-bold text-amber-400">The warranty does NOT cover:</p>
+                <ul className="space-y-1.5 list-disc pl-4 text-slate-300">
+                  <li>Cosmetic damage</li>
+                  <li>Misuse, abuse, negligence, or improper handling</li>
+                  <li>Incorrect installation, operation, or maintenance</li>
+                  <li>Power surges, voltage spikes, lightning, fire, flood</li>
+                  <li>Accidents, vandalism, or unauthorized repairs</li>
+                  <li>Products with altered or removed serial numbers</li>
+                  <li>Normal wear and tear or consumable items</li>
+                </ul>
+              </div>
+
+              <div className="p-3.5 bg-amber-500/10 border border-amber-500/20 rounded-2xl text-[11px] text-amber-200 leading-relaxed">
+                <strong className="text-amber-400 block mb-1">Chargeable Services Notice:</strong>
+                Repairs required due to excluded causes will be treated as chargeable services (labor, parts, transportation).
+              </div>
             </div>
 
             <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4">
-              <h4 className="font-extrabold text-slate-900 text-sm">Need Urgent Assistance?</h4>
-              <p className="text-xs text-slate-500">Contact our Warranty Service Desk directly:</p>
+              <h4 className="font-extrabold text-slate-900 text-sm">Need Direct Warranty Support?</h4>
               <div className="space-y-2 text-xs font-bold">
-                <a href="tel:+94716778833" className="flex items-center gap-2 text-blue-600 hover:underline">
-                  <Phone size={14} /> Call Hotline: +94 71 677 8833
+                <a href="tel:0707779933" className="flex items-center gap-2 text-blue-600 hover:underline">
+                  <Phone size={14} /> Call Hotline: 070 777 99 33 / 071 677 88 33
                 </a>
-                <a href="https://wa.me/94719779933" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-emerald-600 hover:underline">
-                  <MessageCircle size={14} /> WhatsApp Support: 0719779933
+                <a href="tel:0784177404" className="flex items-center gap-2 text-indigo-600 hover:underline">
+                  <Phone size={14} /> Sajith Jayawardena: 078 417 7404
+                </a>
+                <a href="https://wa.me/94707779933" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-emerald-600 hover:underline">
+                  <MessageCircle size={14} /> WhatsApp Support: 0707779933
                 </a>
               </div>
             </div>
           </div>
+
         </div>
       </div>
 

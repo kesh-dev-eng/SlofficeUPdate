@@ -117,107 +117,76 @@ export default function RepairCenterPage() {
 
         {/* BOOK REPAIR FORM & LOCATION INFO */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Booking Form (7/12) */}
+          {/* Direct Repair Contact Desk (7/12) */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
             <div>
               <h3 className="text-xl font-extrabold text-slate-900 flex items-center gap-2">
-                <Wrench size={20} className="text-blue-600" /> Book a Repair / Courier Pickup
+                <Wrench size={20} className="text-blue-600" /> Direct Repair & Servicing Desk
               </h3>
               <p className="text-xs text-slate-500 mt-1">
-                Schedule an in-store diagnostic or request courier pickup for your faulty equipment.
+                Contact our hardware engineers directly to schedule a repair diagnostic or arrange islandwide courier pickup.
               </p>
             </div>
 
-            {bookingSubmitted ? (
-              <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-6 text-center space-y-4">
-                <CheckCircle size={40} className="text-emerald-600 mx-auto" />
-                <h4 className="text-lg font-extrabold text-emerald-900">Repair Job Requested!</h4>
-                <p className="text-xs text-emerald-800 max-w-md mx-auto">
-                  Thank you <strong>{formData.name}</strong>. Our service desk has logged your repair request. We will contact you at <strong>{formData.phone}</strong> for diagnostic pickup details.
-                </p>
-                <button
-                  onClick={() => setBookingSubmitted(false)}
-                  className="bg-white border border-slate-300 text-slate-700 text-xs font-extrabold px-4 py-2.5 rounded-xl hover:bg-slate-50"
-                >
-                  Book Another Repair
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleBookingSubmit} className="space-y-4 text-xs">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Your Full Name *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Nimal Fernando"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Phone Number *</label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="e.g. +94 71 677 8833"
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                    />
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold">
+              {/* Hotline 1 */}
+              <a
+                href="tel:0707779933"
+                className="flex items-center gap-3 p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group"
+              >
+                <div className="w-10 h-10 bg-blue-600 text-white rounded-xl flex items-center justify-center shrink-0">
+                  <Phone size={18} />
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Equipment Category *</label>
-                    <select
-                      value={formData.deviceType}
-                      onChange={(e) => setFormData({ ...formData, deviceType: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium bg-white"
-                    >
-                      <option value="Laptop / PC">Laptop / Desktop PC</option>
-                      <option value="Laser Printer / Copier">Laser Printer / Copier</option>
-                      <option value="CCTV DVR / Camera">CCTV DVR / Security Camera</option>
-                      <option value="Network Router / Switch">Network Router / Switch</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="font-bold text-slate-700 block mb-1">Courier Pickup Required?</label>
-                    <select
-                      value={formData.pickupRequired}
-                      onChange={(e) => setFormData({ ...formData, pickupRequired: e.target.value })}
-                      className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium bg-white"
-                    >
-                      <option value="Yes">Yes (Islandwide Courier Pickup)</option>
-                      <option value="No">No (I will drop off at Repair Center)</option>
-                    </select>
-                  </div>
-                </div>
-
                 <div>
-                  <label className="font-bold text-slate-700 block mb-1">Fault Description *</label>
-                  <textarea
-                    rows={4}
-                    required
-                    placeholder="Describe the issue (e.g. laptop not charging, printer lines, CCTV no signal)..."
-                    value={formData.faultDesc}
-                    onChange={(e) => setFormData({ ...formData, faultDesc: e.target.value })}
-                    className="w-full border border-slate-300 rounded-xl p-3 focus:outline-hidden focus:border-blue-600 font-medium"
-                  ></textarea>
+                  <span className="text-[10px] text-slate-400 block uppercase">Repair Desk Hotline</span>
+                  <span className="text-sm font-black text-slate-900 group-hover:text-blue-600">070 777 99 33</span>
                 </div>
+              </a>
 
-                <button
-                  type="submit"
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold py-3.5 rounded-xl transition-all cursor-pointer shadow-md flex items-center justify-center gap-2 text-sm"
-                >
-                  <Send size={18} /> Submit Repair Request
-                </button>
-              </form>
-            )}
+              {/* Hotline 2 */}
+              <a
+                href="tel:0716778833"
+                className="flex items-center gap-3 p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group"
+              >
+                <div className="w-10 h-10 bg-emerald-600 text-white rounded-xl flex items-center justify-center shrink-0">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-400 block uppercase">Retail Servicing Operations</span>
+                  <span className="text-sm font-black text-slate-900 group-hover:text-emerald-600">071 677 88 33</span>
+                </div>
+              </a>
+
+              {/* Sajith Jayawardena Direct */}
+              <a
+                href="tel:0784177404"
+                className="flex items-center gap-3 p-4 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl transition-all group"
+              >
+                <div className="w-10 h-10 bg-purple-600 text-white rounded-xl flex items-center justify-center shrink-0">
+                  <Phone size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] text-slate-400 block uppercase">Sajith Jayawardena (Direct Mobile)</span>
+                  <span className="text-sm font-black text-slate-900 group-hover:text-purple-600">078 417 7404</span>
+                </div>
+              </a>
+
+              {/* WhatsApp Direct */}
+              <a
+                href="https://wa.me/94707779933?text=Hello%20SL%20Office%20Solutions,%20I%20would%20like%20to%20book%20a%20repair."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/30 rounded-2xl transition-all group"
+              >
+                <div className="w-10 h-10 bg-[#25D366] text-white rounded-xl flex items-center justify-center shrink-0">
+                  <MessageCircle size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] text-emerald-700 block uppercase font-extrabold">Instant WhatsApp Repair Support</span>
+                  <span className="text-sm font-black text-emerald-900">070 777 99 33</span>
+                </div>
+              </a>
+            </div>
           </div>
 
           {/* Repair Center Location & Info (5/12) */}
@@ -228,7 +197,7 @@ export default function RepairCenterPage() {
               </h3>
               <div className="space-y-3 text-xs text-slate-300">
                 <p className="font-bold text-white">SL Office Solutions Repair Center</p>
-                <p>451 Commerce Ave, Suite 200, Colombo 03, Sri Lanka</p>
+                <p>No: 608/11 Makola North, Makola.</p>
                 <div className="flex items-center gap-2 pt-2 text-blue-300 font-semibold">
                   <Clock size={14} /> Open Mon - Sat: 8:30 AM - 6:00 PM
                 </div>
@@ -236,13 +205,16 @@ export default function RepairCenterPage() {
             </div>
 
             <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4">
-              <h4 className="font-extrabold text-slate-900 text-sm">Direct Technician Hotline</h4>
+              <h4 className="font-extrabold text-slate-900 text-sm">Direct Support & Technician Hotline</h4>
               <div className="space-y-2 text-xs font-bold">
-                <a href="tel:+94716778833" className="flex items-center gap-2 text-blue-600 hover:underline">
-                  <Phone size={14} /> Call Technician: +94 71 677 8833
+                <a href="tel:0707779933" className="flex items-center gap-2 text-blue-600 hover:underline">
+                  <Phone size={14} /> Call Hotline: 070 777 99 33 / 071 677 88 33
                 </a>
-                <a href="https://wa.me/94719779933" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-emerald-600 hover:underline">
-                  <MessageCircle size={14} /> WhatsApp Support: 0719779933
+                <a href="tel:0784177404" className="flex items-center gap-2 text-indigo-600 hover:underline">
+                  <Phone size={14} /> Sajith Jayawardena: 078 417 7404
+                </a>
+                <a href="https://wa.me/94707779933" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-emerald-600 hover:underline">
+                  <MessageCircle size={14} /> WhatsApp Support: 0707779933
                 </a>
               </div>
             </div>

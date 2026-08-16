@@ -63,9 +63,9 @@ const HERO_SLIDES = [
 const ABOUT_HIGHLIGHTS = [
   {
     id: 1,
-    title: "20+ Years of Industry Trust",
-    desc: "Empowering Sri Lankan businesses and corporate offices with certified laptops, printers, and office automation since 2004.",
-    tag: "Established 2004",
+    title: "10+ Years of Industry Trust",
+    desc: "Empowering Sri Lankan businesses and corporate offices with certified laptops, printers, and office automation since 2014.",
+    tag: "Established 2014",
     icon: Building2,
     color: "bg-blue-600",
   },
@@ -411,156 +411,198 @@ export default function Home() {
 
       {/* Moving About Us Section */}
       <section id="about-us" className="py-20 bg-gradient-to-b from-slate-50 via-white to-blue-50/30 border-b border-slate-200 overflow-hidden relative">
-        <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="max-w-7xl mx-auto px-6 relative z-10 space-y-16">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="text-xs font-black uppercase tracking-wider text-blue-600 bg-blue-50 px-3.5 py-1 rounded-full border border-blue-100">
+              Company Profile
+            </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              SL Office Solutions <span className="text-blue-600">(Pvt) Ltd</span>
+              SL Office Solutions
             </h2>
-            <p className="text-slate-500 font-semibold text-sm mt-3">
-              Trusted Technology & Business Support Services Across Sri Lanka
+            <p className="text-blue-600 font-bold text-sm tracking-wide">
+              "Empowering Businesses Through Smart Technology Solutions."
             </p>
           </div>
 
-          {/* Main Description Content Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch mb-16">
-            {/* Primary Overview Box */}
-            <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between space-y-6">
-              <div className="space-y-5 text-slate-700 text-sm sm:text-base leading-relaxed">
-                <p className="font-semibold text-slate-900 leading-normal border-l-4 border-blue-600 pl-4 py-1 bg-blue-50/50 rounded-r-xl">
-                  <strong className="text-blue-700 font-bold">SL Office Solutions (Pvt) Ltd</strong> is a trusted provider of Office Automation, Information Technology, Security Solutions, and Business Support Services in Sri Lanka.
-                </p>
-                <p className="text-slate-600">
-                  We deliver innovative, reliable, and cost-effective technology solutions that help organizations improve productivity, enhance operational efficiency, and achieve sustainable growth.
-                </p>
-                <p className="text-slate-600">
-                  With a customer-focused approach and a team of experienced professionals, we provide complete solutions from consultation and system design to installation, implementation, maintenance, and after-sales support.
-                </p>
-                <p className="text-slate-600 font-medium bg-slate-50 p-4 rounded-2xl border border-slate-100">
-                  Our commitment to quality, innovation, and service excellence has enabled us to build strong partnerships with government institutions, banking and financial organizations, corporate enterprises, educational institutions, and SMEs across Sri Lanka.
-                </p>
-              </div>
+          {/* About Us Paragraphs */}
+          <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm space-y-6">
+            <h3 className="text-2xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-4">About Us</h3>
+            <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+              <p>
+                <strong>SL Office Solutions</strong> is a trusted provider of <strong>office automation, information technology, security solutions, and business support services</strong> in Sri Lanka. We specialize in delivering innovative, reliable, and cost-effective technology solutions that help organizations enhance productivity, improve operational efficiency, and achieve sustainable business growth.
+              </p>
+              <p>
+                With a strong customer-focused approach and a team of experienced professionals, we provide end-to-end solutions covering consultation, system design, supply, installation, implementation, maintenance, and after-sales support.
+              </p>
+              <p className="bg-blue-50/60 p-4 rounded-2xl border border-blue-100/80 font-medium text-slate-800">
+                Our commitment to quality, innovation, and service excellence has enabled us to build strong partnerships with government institutions, banking and financial organizations, corporate enterprises, educational institutions, and small and medium-sized businesses across Sri Lanka.
+              </p>
+            </div>
+          </div>
 
-              <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-slate-100 text-xs font-bold uppercase tracking-wider text-slate-500">
-                <span className="flex items-center gap-2 text-blue-700">
-                  <CheckCircle size={16} className="text-blue-600" /> Complete Consultation
-                </span>
-                <span className="flex items-center gap-2 text-emerald-700">
-                  <CheckCircle size={16} className="text-emerald-600" /> On-site Installation
-                </span>
-                <span className="flex items-center gap-2 text-purple-700">
-                  <CheckCircle size={16} className="text-purple-600" /> After-Sales Support
-                </span>
+          {/* Vision & Mission Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Vision */}
+            <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-blue-950 text-white rounded-3xl p-8 space-y-4 shadow-xl border border-slate-800">
+              <div className="w-12 h-12 rounded-2xl bg-blue-500/20 border border-blue-400/30 flex items-center justify-center text-blue-400">
+                <ShieldCheck size={28} />
               </div>
+              <h3 className="text-2xl font-black text-white">Our Vision</h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                To become Sri Lanka's most trusted technology solutions provider by delivering innovative office automation and digital transformation solutions that empower businesses through excellence, reliability, and sustainable growth.
+              </p>
             </div>
 
-            {/* Key Client Partnerships & Impact Cards */}
-            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="bg-gradient-to-br from-blue-900 to-slate-900 text-white rounded-3xl p-6 flex flex-col justify-between shadow-lg">
-                <div>
-                  <div className="w-10 h-10 rounded-2xl bg-blue-500/20 border border-blue-400/30 flex items-center justify-center mb-4 text-blue-300">
-                    <Building2 size={22} />
-                  </div>
-                  <h3 className="font-bold text-lg text-white">Government & Corporate</h3>
-                  <p className="text-xs text-slate-300 mt-2 leading-relaxed">
-                    Trusted tech infrastructure partner for government bodies, corporate enterprises, and SMEs.
-                  </p>
+            {/* Mission */}
+            <div className="bg-gradient-to-br from-slate-900 via-blue-950 to-emerald-950 text-white rounded-3xl p-8 space-y-4 shadow-xl border border-slate-800">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center text-emerald-400">
+                <Award size={28} />
+              </div>
+              <h3 className="text-2xl font-black text-white">Our Mission</h3>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                To provide high-quality office automation, IT infrastructure, security, and managed technology solutions that improve customer productivity and operational efficiency while creating long-term partnerships through exceptional service, innovation, and integrity.
+              </p>
+            </div>
+          </div>
+
+          {/* Core Services Pillars */}
+          <div className="space-y-6">
+            <h3 className="text-2xl font-extrabold text-slate-900 text-center">Our Core Services & Solutions</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+                <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center font-bold">
+                  <Printer size={20} />
                 </div>
-                <span className="text-[11px] font-bold uppercase text-blue-400 mt-4 tracking-wider">Islandwide Reach</span>
+                <h4 className="font-extrabold text-slate-900 text-sm">Office Automation</h4>
+                <p className="text-[11px] text-slate-500">MFPs, Laser/Inkjet Printers, Copiers, Scanners & Document Solutions.</p>
               </div>
 
-              <div className="bg-gradient-to-br from-emerald-900 to-slate-900 text-white rounded-3xl p-6 flex flex-col justify-between shadow-lg">
-                <div>
-                  <div className="w-10 h-10 rounded-2xl bg-emerald-500/20 border border-emerald-400/30 flex items-center justify-center mb-4 text-emerald-300">
-                    <Award size={22} />
-                  </div>
-                  <h3 className="font-bold text-lg text-white">Banking & Finance</h3>
-                  <p className="text-xs text-slate-300 mt-2 leading-relaxed">
-                    High-security CCTV systems, access control, and IT solutions tailored for financial institutions.
-                  </p>
+              <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+                <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center font-bold">
+                  <ShieldCheck size={20} />
                 </div>
-                <span className="text-[11px] font-bold uppercase text-emerald-400 mt-4 tracking-wider">Bank Grade Tech</span>
+                <h4 className="font-extrabold text-slate-900 text-sm">CCTV & Security</h4>
+                <p className="text-[11px] text-slate-500">IP Surveillance, AI CCTV, NVR/DVR, Access Control & Time Attendance.</p>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-900 to-slate-900 text-white rounded-3xl p-6 flex flex-col justify-between shadow-lg sm:col-span-2">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-400/30 flex items-center justify-center shrink-0 text-purple-300">
-                    <ShieldCheck size={26} />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg text-white">Educational & Business Support</h3>
-                    <p className="text-xs text-slate-300 mt-1.5 leading-relaxed">
-                      Empowering universities, schools, and business centers with modern office automation, interactive displays, and 24/7 support services.
-                    </p>
-                  </div>
+              <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+                <div className="w-10 h-10 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center font-bold">
+                  <Wifi size={20} />
+                </div>
+                <h4 className="font-extrabold text-slate-900 text-sm">IT Infrastructure</h4>
+                <p className="text-[11px] text-slate-500">Structured Cabling, LAN/WAN Solutions, Network Installation & Support.</p>
+              </div>
+
+              <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+                <div className="w-10 h-10 bg-amber-50 text-amber-600 rounded-xl flex items-center justify-center font-bold">
+                  <Laptop size={20} />
+                </div>
+                <h4 className="font-extrabold text-slate-900 text-sm">Computer Equipment</h4>
+                <p className="text-[11px] text-slate-500">Desktop PCs, Laptops, Monitors, UPS Systems & Office Accessories.</p>
+              </div>
+
+              <div className="bg-white p-5 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+                <div className="w-10 h-10 bg-rose-50 text-rose-600 rounded-xl flex items-center justify-center font-bold">
+                  <Wrench size={20} />
+                </div>
+                <h4 className="font-extrabold text-slate-900 text-sm">Technical Support</h4>
+                <p className="text-[11px] text-slate-500">Preventive Maintenance, Breakdown Repairs, Spare Parts & On-Site Support.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Industries We Serve */}
+          <div className="bg-white rounded-3xl p-8 sm:p-10 border border-slate-200 shadow-sm space-y-6">
+            <h3 className="text-2xl font-extrabold text-slate-900">Industries We Serve</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 text-xs">
+              {[
+                "Government Institutions",
+                "Banking & Financial Services",
+                "Corporate Organizations",
+                "Educational Institutions",
+                "Healthcare Sector",
+                "Manufacturing Industries",
+                "Hospitality Sector",
+                "Retail Businesses",
+                "Small & Medium Enterprises (SMEs)"
+              ].map((ind, i) => (
+                <div key={i} className="flex items-center gap-2 p-3 bg-slate-50 rounded-xl border border-slate-100 font-bold text-slate-700">
+                  <CheckCircle size={14} className="text-blue-600 shrink-0" />
+                  <span>{ind}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Why Choose Us & Core Values */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Why Choose Us */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm space-y-5">
+              <h3 className="text-xl font-extrabold text-slate-900">Why Choose SL Office Solutions</h3>
+              <ul className="space-y-2.5 text-xs text-slate-700 font-medium">
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 size={16} className="text-blue-600 shrink-0 mt-0.5" />
+                  <span>Experienced and qualified technical professionals</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 size={16} className="text-blue-600 shrink-0 mt-0.5" />
+                  <span>Reliable products from globally recognized brands</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 size={16} className="text-blue-600 shrink-0 mt-0.5" />
+                  <span>Customized solutions based on customer requirements</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 size={16} className="text-blue-600 shrink-0 mt-0.5" />
+                  <span>Competitive and transparent pricing</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 size={16} className="text-blue-600 shrink-0 mt-0.5" />
+                  <span>Strong after-sales service commitment</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 size={16} className="text-blue-600 shrink-0 mt-0.5" />
+                  <span>Long-term customer relationships</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <CheckCircle2 size={16} className="text-blue-600 shrink-0 mt-0.5" />
+                  <span>Focus on quality, reliability, and continuous improvement</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Core Values */}
+            <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm space-y-5">
+              <h3 className="text-xl font-extrabold text-slate-900">Our Core Values</h3>
+              <div className="space-y-3 text-xs">
+                <div>
+                  <span className="font-extrabold text-blue-700 text-sm block">Integrity</span>
+                  <span className="text-slate-600">We conduct our business with honesty, transparency, and strong ethical principles.</span>
+                </div>
+                <div>
+                  <span className="font-extrabold text-emerald-700 text-sm block">Customer Focus</span>
+                  <span className="text-slate-600">Customer satisfaction is at the heart of everything we do.</span>
+                </div>
+                <div>
+                  <span className="font-extrabold text-purple-700 text-sm block">Innovation & Quality</span>
+                  <span className="text-slate-600">We continuously adopt new technologies and maintain high standards in all products and interactions.</span>
+                </div>
+                <div>
+                  <span className="font-extrabold text-amber-700 text-sm block">Teamwork & Accountability</span>
+                  <span className="text-slate-600">We believe in collaboration and take ownership of our commitments to deliver on our promises.</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Moving Auto-Scroll Cards Row */}
-          <div className="pt-6 border-t border-slate-200">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
-              <div>
-                <h3 className="text-xl font-bold text-slate-900">Key Strengths & Core Services</h3>
-                <p className="text-xs text-slate-500 mt-1">Hover over any card to pause auto-scrolling</p>
-              </div>
-              <div className="flex items-center gap-2 shrink-0">
-                <button
-                  onClick={() => scrollAbout('left')}
-                  className="p-2.5 bg-white border border-slate-200 hover:border-blue-500 rounded-xl text-slate-700 hover:text-blue-600 shadow-xs hover:shadow-md transition-all cursor-pointer"
-                  aria-label="Previous About item"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-                <button
-                  onClick={() => scrollAbout('right')}
-                  className="p-2.5 bg-white border border-slate-200 hover:border-blue-500 rounded-xl text-slate-700 hover:text-blue-600 shadow-xs hover:shadow-md transition-all cursor-pointer"
-                  aria-label="Next About item"
-                >
-                  <ChevronRight size={20} />
-                </button>
-              </div>
-            </div>
-
-            <div
-              ref={aboutContainerRef}
-              onMouseEnter={() => setIsAboutPaused(true)}
-              onMouseLeave={() => setIsAboutPaused(false)}
-              className="flex gap-6 overflow-x-auto scroll-smooth pb-4 pt-2"
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            >
-              {ABOUT_HIGHLIGHTS.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div
-                    key={item.id}
-                    className="w-[300px] sm:w-[340px] shrink-0 bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1 relative"
-                  >
-                    <div>
-                      <div className="flex justify-between items-start mb-4">
-                        <div className={`w-12 h-12 rounded-2xl ${item.color} text-white flex items-center justify-center shadow-md group-hover:scale-110 transition-transform`}>
-                          <Icon size={24} />
-                        </div>
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
-                          {item.tag}
-                        </span>
-                      </div>
-                      <h3 className="font-bold text-slate-900 text-lg group-hover:text-blue-600 transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                        {item.desc}
-                      </p>
-                    </div>
-
-                    <div className="mt-6 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-blue-600 gap-1 group-hover:translate-x-1 transition-transform">
-                      Learn more <ArrowRight size={14} />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+          {/* Our Commitment */}
+          <div className="bg-gradient-to-r from-blue-900 to-indigo-950 text-white rounded-3xl p-8 sm:p-10 space-y-4 shadow-xl">
+            <h3 className="text-2xl font-extrabold text-white">Our Commitment</h3>
+            <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
+              At <strong>SL Office Solutions</strong>, we are committed to becoming a reliable technology partner for businesses by providing innovative solutions supported by professional service and technical expertise. We focus on understanding customer requirements, delivering value-driven solutions, and maintaining long-term relationships through quality, reliability, and continuous support. Our goal is to help organizations improve productivity, reduce operational costs, and successfully adapt to the rapidly changing digital business environment.
+            </p>
           </div>
+
         </div>
       </section>
 
@@ -843,6 +885,7 @@ export default function Home() {
             <ul className="space-y-2 text-xs">
               <li><Link to="/" className="hover:text-white">Home</Link></li>
               <li><a href="#about-us" className="hover:text-white font-medium text-blue-400">About Us</a></li>
+              <li><Link to="/terms-conditions" className="hover:text-white text-emerald-400 font-semibold">Terms & Conditions</Link></li>
               <li><Link to="/signin" className="hover:text-white">Sign In</Link></li>
               <li><Link to="/signup" className="hover:text-white">Sign Up</Link></li>
             </ul>
@@ -850,33 +893,41 @@ export default function Home() {
           <div>
             <h4 className="text-white font-semibold mb-3">Services</h4>
             <ul className="space-y-2 text-xs">
+              <li><Link to="/services" className="hover:text-white transition-colors">Our Services</Link></li>
               <li><Link to="/warranty-claim" className="hover:text-white transition-colors">Warranty Claim</Link></li>
               <li><Link to="/repair-center" className="hover:text-white transition-colors">Repair Center</Link></li>
-              <li><Link to="/installation-service" className="hover:text-white transition-colors">Installation Service</Link></li>
-              <li><Link to="/delivery-returns" className="hover:text-white transition-colors">Delivery & Returns</Link></li>
+              <li><Link to="/delivery-returns" className="hover:text-white transition-colors">Delivery & Returns Policy</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-3">Contact Us</h4>
             <ul className="text-xs text-slate-400 space-y-2 leading-relaxed font-medium">
+              <li className="flex items-start gap-2 text-slate-300">
+                <Building2 size={14} className="text-blue-400 shrink-0 mt-0.5" />
+                <span><strong className="text-white font-bold">Address:</strong> No: 608/11 Makola North, Makola.</span>
+              </li>
               <li className="flex items-center gap-2 text-slate-300">
                 <Phone size={14} className="text-blue-400 shrink-0" />
-                <span><strong className="text-white font-bold">Hotline:</strong> +94 70 777 99 33</span>
+                <span><strong className="text-white font-bold">Hotline:</strong> 070 777 99 33</span>
               </li>
               <li className="flex items-center gap-2 text-slate-300">
                 <Phone size={14} className="text-emerald-400 shrink-0" />
-                <span><strong className="text-white font-bold">Retail Operation:</strong> +94 71 677 88 33</span>
+                <span><strong className="text-white font-bold">Retail Operation:</strong> 071 677 88 33</span>
+              </li>
+              <li className="flex items-center gap-2 text-slate-300">
+                <Phone size={14} className="text-purple-400 shrink-0" />
+                <span><strong className="text-white font-bold">Direct Mobile:</strong> 078 417 7404</span>
               </li>
               <li className="flex items-center gap-2 text-slate-300">
                 <Mail size={14} className="text-amber-400 shrink-0" />
-                <span><strong className="text-white font-bold">E Mail:</strong> <a href="mailto:slofficesolutions@gmail.com" className="hover:underline text-blue-300">slofficesolutions@gmail.com</a></span>
+                <span><strong className="text-white font-bold">Email:</strong> <a href="mailto:slofficesolutions@gmail.com" className="hover:underline text-blue-300">slofficesolutions@gmail.com</a></span>
               </li>
-
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto pt-6 border-t border-slate-800 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} SL Office Solutions. All rights reserved.
+        <div className="max-w-7xl mx-auto pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-2">
+          <span>© {new Date().getFullYear()} SL Office Solutions. All rights reserved.</span>
+          <span className="text-slate-400 font-medium">"Empowering Businesses Through Smart Technology Solutions."</span>
         </div>
       </footer>
     </div>
