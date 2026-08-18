@@ -278,7 +278,7 @@ export default function Navbar({ onSelectCategory }) {
                         <Link to="/" className="flex items-center shrink-0">
                             <img
                                 src="https://i.ibb.co/JwdVFJ7F/8ae29306a7134459aa19ca39ad56cdba.jpg"
-                                alt="SL Office Solutions Logo"
+                                alt="SL Office Solutions (PVT) LTD Logo"
                                 className="h-10 sm:h-12 w-auto object-contain rounded-md"
                             />
                         </Link>

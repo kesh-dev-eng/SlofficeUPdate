@@ -47,7 +47,7 @@ export default function WarrantyClaimPage() {
       });
       setSerialError('');
     } else {
-      setSerialError('Serial number not found. Please check your invoice or contact SL Office Solutions support.');
+      setSerialError('Serial number not found. Please check your invoice or contact SL Office Solutions (PVT) LTD support.');
       setSerialResult(null);
     }
   };
@@ -80,8 +80,8 @@ export default function WarrantyClaimPage() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
       <SEOHead
-        title="Warranty Terms & Claim Portal | SL Office Solutions"
-        description="Official Warranty Terms & Conditions, 1-Year Manufacturer Warranty registration, and serial verification for SL Office Solutions."
+        title="Warranty Terms & Claim Portal | SL Office Solutions (PVT) LTD"
+        description="Official Warranty Terms & Conditions, 1-Year Manufacturer Warranty registration, and serial verification for SL Office Solutions (PVT) LTD."
       />
 
       <Navbar />
@@ -91,7 +91,7 @@ export default function WarrantyClaimPage() {
         <div className="absolute -top-32 -left-32 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10 space-y-4 text-center max-w-3xl">
           <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-extrabold uppercase px-3.5 py-1.5 rounded-full">
-            <ShieldCheck size={14} /> Official SL Office Guarantee
+            <ShieldCheck size={14} /> Official SL Office Solutions (PVT) LTD Guarantee
           </div>
           <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
             Warranty Claim & Verification

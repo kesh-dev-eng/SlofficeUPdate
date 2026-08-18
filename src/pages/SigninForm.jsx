@@ -64,8 +64,8 @@ const SigninForm = () => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
       <SEOHead
-        title="Sign In | SL Office Solutions Sri Lanka"
-        description="Sign in to your SL Office Solutions account to manage orders, default shipping address, and tech products in Sri Lanka."
+        title="Sign In | SL Office Solutions (PVT) LTD Sri Lanka"
+        description="Sign in to your SL Office Solutions (PVT) LTD account to manage orders, default shipping address, and tech products in Sri Lanka."
       />
       <Navbar />
 

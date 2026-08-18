@@ -76,7 +76,7 @@ export default function RepairCenterPage() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
       <SEOHead
-        title="Hardware Repair Center & Tech Servicing | SL Office Solutions"
+        title="Hardware Repair Center & Tech Servicing | SL Office Solutions (PVT) LTD"
         description="Certified repair center in Colombo Sri Lanka for laptops, PCs, laser printers, copiers, and CCTV camera systems."
       />
 
@@ -173,7 +173,7 @@ export default function RepairCenterPage() {
 
               {/* WhatsApp Direct */}
               <a
-                href="https://wa.me/94707779933?text=Hello%20SL%20Office%20Solutions,%20I%20would%20like%20to%20book%20a%20repair."
+                href="https://wa.me/94707779933?text=Hello%20SL%20Office%20Solutions%20(PVT)%20LTD,%20I%20would%20like%20to%20book%20a%20repair."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/30 rounded-2xl transition-all group"
@@ -196,7 +196,7 @@ export default function RepairCenterPage() {
                 <MapPin size={20} className="text-blue-400" /> Main Repair Center Location
               </h3>
               <div className="space-y-3 text-xs text-slate-300">
-                <p className="font-bold text-white">SL Office Solutions Repair Center</p>
+                <p className="font-bold text-white">SL Office Solutions (PVT) LTD Repair Center</p>
                 <p>No: 608/11 Makola North, Makola.</p>
                 <div className="flex items-center gap-2 pt-2 text-blue-300 font-semibold">
                   <Clock size={14} /> Open Mon - Sat: 8:30 AM - 6:00 PM

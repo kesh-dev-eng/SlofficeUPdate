@@ -20,8 +20,8 @@ export default function TermsConditionsPage() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
       <SEOHead
-        title="Terms & Conditions | SL Office Solutions"
-        description="Official Terms and Conditions, quotation validity, delivery schedule, payment terms, warranty coverage, force majeure, and contact details for SL Office Solutions."
+        title="Terms & Conditions | SL Office Solutions (PVT) LTD"
+        description="Official Terms and Conditions, quotation validity, delivery schedule, payment terms, warranty coverage, force majeure, and contact details for SL Office Solutions (PVT) LTD."
       />
 
       <Navbar />
@@ -37,7 +37,7 @@ export default function TermsConditionsPage() {
             Terms & Conditions
           </h1>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-            SL Office Solutions — Empowering Businesses Through Smart Technology Solutions.
+            SL Office Solutions (PVT) LTD — Empowering Businesses Through Smart Technology Solutions.
           </p>
         </div>
       </section>
@@ -51,7 +51,7 @@ export default function TermsConditionsPage() {
               <Building size={24} />
             </div>
             <div>
-              <h2 className="text-xl font-extrabold text-slate-900">SL Office Solutions</h2>
+              <h2 className="text-xl font-extrabold text-slate-900">SL Office Solutions (PVT) LTD</h2>
               <p className="text-xs text-slate-500 font-medium">
                 No: 608/11 Makola North, Makola. Tel: 070 777 99 33, 071 677 88 33 | Email: slofficesolutions@gmail.com | Web: www.sloffice.lk
               </p>
@@ -157,7 +157,7 @@ export default function TermsConditionsPage() {
             <h3 className="text-lg font-extrabold text-slate-900">6. Force Majeure</h3>
           </div>
           <p className="text-xs sm:text-sm text-slate-700 leading-relaxed pl-8">
-            <strong>SL Office Solutions</strong> reserves the right to suspend or discontinue installation, maintenance, or other services if circumstances arise within a <strong>25 km radius</strong> of the project site that may endanger the safety of its employees, representatives, or contractors. Such circumstances include, but are not limited to:
+            <strong>SL Office Solutions (PVT) LTD</strong> reserves the right to suspend or discontinue installation, maintenance, or other services if circumstances arise within a <strong>25 km radius</strong> of the project site that may endanger the safety of its employees, representatives, or contractors. Such circumstances include, but are not limited to:
           </p>
           <ul className="space-y-2 text-xs text-slate-700 pl-8">
             <li className="flex items-start gap-2">
@@ -188,7 +188,7 @@ export default function TermsConditionsPage() {
           <div className="pl-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
             <div className="bg-white/10 p-4 rounded-2xl border border-white/10 space-y-1">
               <p className="font-bold text-white text-sm">Sajith Jayawardena</p>
-              <p className="text-blue-300 font-semibold">SL Office Solutions</p>
+              <p className="text-blue-300 font-semibold">SL Office Solutions (PVT) LTD</p>
               <p className="text-slate-300 flex items-center gap-2 pt-1">
                 <Phone size={14} className="text-emerald-400" /> Mobile: 078 417 7404 / 070 777 99 33
               </p>

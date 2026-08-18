@@ -124,7 +124,7 @@ app.use(async (req, res, next) => {
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
-    message: 'SL Office Solutions Express Server is running',
+    message: 'SL Office Solutions (PVT) LTD Express Server is running',
     dbConnected: Boolean(db)
   });
 });
@@ -485,5 +485,5 @@ app.use((req, res, next) => {
 });
 
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 SL Office Backend Server running on http://127.0.0.1:${PORT}`);
+  console.log(`🚀 SL Office Solutions (PVT) LTD Backend Server running on http://127.0.0.1:${PORT}`);
 });

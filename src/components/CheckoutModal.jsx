@@ -89,7 +89,7 @@ export default function CheckoutModal() {
     const itemsList = cart.map((item, idx) => `${idx + 1}. *${item.name}* (x${item.quantity}) - ${item.price}`).join('\n');
     const orderDate = new Date().toISOString().split('T')[0];
 
-    return `🛒 *SL OFFICE SOLUTIONS - NEW ORDER INVOICE*
+    return `🛒 *SL OFFICE SOLUTIONS (PVT) LTD - NEW ORDER INVOICE*
 ----------------------------------------
 *Order ID:* #SL-${orderId}
 *Date:* ${orderDate}
@@ -106,7 +106,7 @@ ${itemsList}
 ----------------------------------------
 💰 *Total Amount:* LKR ${totalPrice.toFixed(2)}
 ----------------------------------------
-Hello SL Office Solutions, I have placed this order on your store. Please process and confirm my order. Thank you!`;
+Hello SL Office Solutions (PVT) LTD, I have placed this order on your store. Please process and confirm my order. Thank you!`;
   };
 
   const handleSubmitOrder = async (e) => {

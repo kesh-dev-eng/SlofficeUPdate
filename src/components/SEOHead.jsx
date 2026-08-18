@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 export default function SEOHead({
-  title = "SL Office Solutions | Laptops, Printers, CCTV & Tech in Sri Lanka",
+  title = "SL Office Solutions (PVT) LTD | Laptops, Printers, CCTV & Tech in Sri Lanka",
   description = "Sri Lanka's premier destination for high-performance laptops, CCTV security systems, wireless printers, and office automation tech.",
   keywords = "laptops sri lanka, office automation colombo, cctv security camera sri lanka, wireless laser printer, tech store sri lanka"
 }) {

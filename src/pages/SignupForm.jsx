@@ -58,8 +58,8 @@ const SignupForm = () => {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-sans">
       <SEOHead
-        title="Create Account | SL Office Solutions Sri Lanka"
-        description="Register an account with SL Office Solutions to enjoy fast ordering, default shipping address pre-filling, and islandwide Sri Lanka tech delivery."
+        title="Create Account | SL Office Solutions (PVT) LTD Sri Lanka"
+        description="Register an account with SL Office Solutions (PVT) LTD to enjoy fast ordering, default shipping address pre-filling, and islandwide Sri Lanka tech delivery."
       />
       <Navbar />
 

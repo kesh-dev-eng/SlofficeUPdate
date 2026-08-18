@@ -234,7 +234,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
       <SEOHead
-        title="SL Office Solutions | Laptops, Printers, CCTV & Tech Store Sri Lanka"
+        title="SL Office Solutions (PVT) LTD | Laptops, Printers, CCTV & Tech Store Sri Lanka"
         description="Buy genuine laptops, CCTV security systems, laser printers, and office automation tech in Sri Lanka. Fast islandwide delivery with warranty."
         keywords="laptops sri lanka, office automation colombo, cctv security camera sri lanka, wireless laser printer, tech store sri lanka"
       />
@@ -417,7 +417,7 @@ export default function Home() {
               Company Profile
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-              SL Office Solutions
+              SL Office Solutions (PVT) LTD
             </h2>
             <p className="text-blue-600 font-bold text-sm tracking-wide">
               "Empowering Businesses Through Smart Technology Solutions."
@@ -429,7 +429,7 @@ export default function Home() {
             <h3 className="text-2xl font-extrabold text-slate-900 border-l-4 border-blue-600 pl-4">About Us</h3>
             <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
               <p>
-                <strong>SL Office Solutions</strong> is a trusted provider of <strong>office automation, information technology, security solutions, and business support services</strong> in Sri Lanka. We specialize in delivering innovative, reliable, and cost-effective technology solutions that help organizations enhance productivity, improve operational efficiency, and achieve sustainable business growth.
+                <strong>SL Office Solutions (PVT) LTD</strong> is a trusted provider of <strong>office automation, information technology, security solutions, and business support services</strong> in Sri Lanka. We specialize in delivering innovative, reliable, and cost-effective technology solutions that help organizations enhance productivity, improve operational efficiency, and achieve sustainable business growth.
               </p>
               <p>
                 With a strong customer-focused approach and a team of experienced professionals, we provide end-to-end solutions covering consultation, system design, supply, installation, implementation, maintenance, and after-sales support.
@@ -538,7 +538,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Why Choose Us */}
             <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm space-y-5">
-              <h3 className="text-xl font-extrabold text-slate-900">Why Choose SL Office Solutions</h3>
+              <h3 className="text-xl font-extrabold text-slate-900">Why Choose SL Office Solutions (PVT) LTD</h3>
               <ul className="space-y-2.5 text-xs text-slate-700 font-medium">
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 size={16} className="text-blue-600 shrink-0 mt-0.5" />
@@ -599,7 +599,7 @@ export default function Home() {
           <div className="bg-gradient-to-r from-blue-900 to-indigo-950 text-white rounded-3xl p-8 sm:p-10 space-y-4 shadow-xl">
             <h3 className="text-2xl font-extrabold text-white">Our Commitment</h3>
             <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-normal">
-              At <strong>SL Office Solutions</strong>, we are committed to becoming a reliable technology partner for businesses by providing innovative solutions supported by professional service and technical expertise. We focus on understanding customer requirements, delivering value-driven solutions, and maintaining long-term relationships through quality, reliability, and continuous support. Our goal is to help organizations improve productivity, reduce operational costs, and successfully adapt to the rapidly changing digital business environment.
+              At <strong>SL Office Solutions (PVT) LTD</strong>, we are committed to becoming a reliable technology partner for businesses by providing innovative solutions supported by professional service and technical expertise. We focus on understanding customer requirements, delivering value-driven solutions, and maintaining long-term relationships through quality, reliability, and continuous support. Our goal is to help organizations improve productivity, reduce operational costs, and successfully adapt to the rapidly changing digital business environment.
             </p>
           </div>
 
@@ -925,7 +925,7 @@ export default function Home() {
           </div>
         </div>
         <div className="max-w-7xl mx-auto pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-2">
-          <span>© {new Date().getFullYear()} SL Office Solutions. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} SL Office Solutions (PVT) LTD. All rights reserved.</span>
           <span className="text-slate-400 font-medium">"Empowering Businesses Through Smart Technology Solutions."</span>
         </div>
       </footer>

@@ -1,4 +1,4 @@
-// Initial default products catalog for SL Office Solutions (Prices & Details synced with Sense.lk)
+// Initial default products catalog for SL Office Solutions (PVT) LTD (Prices & Details synced with Sense.lk)
 export const PRODUCTS = [
   // --- COMPUTER AND ACCESSORIES ---
   {

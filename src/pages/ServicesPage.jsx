@@ -184,13 +184,13 @@ export default function ServicesPage() {
     }
   };
 
-  const whatsappMessage = `Hello SL Office Solutions, I would like to request a quotation for: ${formData.service || selectedService}. My name is ${formData.name || 'Customer'}.`;
+  const whatsappMessage = `Hello SL Office Solutions (PVT) LTD, I would like to request a quotation for: ${formData.service || selectedService}. My name is ${formData.name || 'Customer'}.`;
   const whatsappUrl = `https://wa.me/94707779933?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
       <SEOHead
-        title="Our Services | SL Office Solutions Sri Lanka"
+        title="Our Services | SL Office Solutions (PVT) LTD Sri Lanka"
         description="Office Automation, CCTV Security, IT Infrastructure, Computer & Office Equipment supply, and Technical Support & Maintenance Services in Sri Lanka."
       />
 
@@ -204,7 +204,7 @@ export default function ServicesPage() {
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 bg-blue-500/10 text-blue-400 border border-blue-500/20 text-xs font-extrabold uppercase px-3.5 py-1.5 rounded-full">
-              <Sparkles size={14} /> SL Office Solutions Services
+              <Sparkles size={14} /> SL Office Solutions (PVT) LTD Services
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight">
@@ -223,7 +223,7 @@ export default function ServicesPage() {
                 <FileText size={18} /> Request Free Quotation
               </a>
               <a
-                href="https://wa.me/94707779933?text=Hello%20SL%20Office%20Solutions,%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                href="https://wa.me/94707779933?text=Hello%20SL%20Office%20Solutions%20(PVT)%20LTD,%20I%20would%20like%20to%20inquire%20about%20your%20services."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-2xl shadow-xl shadow-emerald-600/20 hover:scale-105 transition-all flex items-center gap-2 border border-emerald-400/30"
@@ -376,7 +376,7 @@ export default function ServicesPage() {
                 Direct Contact & Consultation
               </span>
               <h3 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-white">
-                Contact SL Office Solutions Directly
+                Contact SL Office Solutions (PVT) LTD Directly
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                 Call our hotlines or message us directly on WhatsApp for immediate technical support, on-site service booking, or itemized quotation requests.

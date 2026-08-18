@@ -73,7 +73,7 @@ export default function InstallationServicePage() {
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-800 flex flex-col">
       <SEOHead
-        title="On-Site Installation Services | SL Office Solutions"
+        title="On-Site Installation Services | SL Office Solutions (PVT) LTD"
         description="Professional on-site installation for CCTV cameras, Wi-Fi 6 networking cabling, printers, and conference room AV systems in Sri Lanka."
       />
 
